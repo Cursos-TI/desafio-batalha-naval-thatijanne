@@ -84,5 +84,38 @@ int main() {
         printf("\n");
     }
 
+
+    //Inserindo os Navios na Diagonal
+
+    printf("\n");
+    printf("***Inserindo os navios na diagonal***\n\n");
+
+    for (int i = 0; i < 10; i++){
+        tabuleiro[i][i] = 3;
+    }
+     for (int i = 9; i >= 0; i--){
+        tabuleiro[9-i][i] = 3;
+    }
+
+    printf("   ");
+
+    for(int j = 0; j < 10; j++){
+        printf("%c ", linha[j]);
+    }
+
+    printf("\n");
+
+    for (int i = 0; i < 10; i++){
+        printf(" %d ", i + 1);
+        for (int j = 0; j < 10; j++){
+            printf("%d ", tabuleiro[i][j]);   
+        } 
+        printf("\n");
+    }
+
+
+
+
+
     return 0;
 }
