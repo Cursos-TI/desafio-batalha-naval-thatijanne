@@ -42,7 +42,7 @@ int main() {
     printf("***Jogo Batalha Naval***\n\n");
     printf("   ");
   
-        for(int j = 0; j < 10; j++){
+    for(int j = 0; j < 10; j++){
         printf("%c ", linha[j]);
     }
 
@@ -57,36 +57,32 @@ int main() {
         printf("\n");
     }
 
-    printf("\n");
-    printf("***Inserindo os navios***\n\n");
-
-    int navio [2] = {3,4};
-
-    printf("   ");
+    //Inserindo os Navios na Linha e Coluna
     
+    printf("\n");
+    printf("***Inserindo os navios horizontalmente e verticalmente***\n\n");
+
+    tabuleiro[2][3] = 3;
+    tabuleiro[2][4] = 3;
+    tabuleiro[2][5] = 3;
+    tabuleiro[1][4] = 3;
+    tabuleiro[3][4] = 3;
+
+     printf("   ");
+
     for(int j = 0; j < 10; j++){
         printf("%c ", linha[j]);
     }
 
     printf("\n");
 
-    int contador = 0;
-
     for (int i = 0; i < 10; i++){
         printf(" %d ", i + 1);
         for (int j = 0; j < 10; j++){
-            if ((navio[0] == i && navio [1] == j) || contador > 0 && contador < 3)
-            {
-                printf("3 ");
-                contador++;
-            } else {
-                printf("0 ");
-            }     
+            printf("%d ", tabuleiro[i][j]);   
         } 
         printf("\n");
     }
-
-
 
     return 0;
 }
